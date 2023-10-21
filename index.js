@@ -33,7 +33,6 @@ async function run() {
     
     app.post('/cart', async (req, res) => {
         const body=req.body
-        
       const value = await cart.insertOne(body)
       res.send(value)})
    
