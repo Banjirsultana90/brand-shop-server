@@ -97,7 +97,7 @@ run().catch(console.dir);
 
 
 app.get('/',(req,res)=>{
-    res.send('crud is runnin....')
+    res.send('crud is fuctioning')
 })
 
 app.listen(port,()=>{
