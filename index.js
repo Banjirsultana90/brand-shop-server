@@ -64,7 +64,7 @@ async function run() {
             const result=await allproducts.find().toArray()
             res.send(result)})
 
-        app.put('/products/:id', async (req, res) => {
+       app.put('/products/:id', async (req, res) => {
             const id = req.params.id;
             console.log(id);
             const filter = { _id: new ObjectId(id) };
