@@ -61,7 +61,10 @@ async function run() {
 
         })
         app.get('/products/:id',async(req,res)=>{
-            const result=await allproducts.find().toArray()
+            const id = req.params.id;
+            console.log(id);
+            const filter = { _id: new ObjectId(id) };
+            const result=await allproducts.findOne(filter)
             res.send(result)})
 
        app.put('/products/:id', async (req, res) => {
